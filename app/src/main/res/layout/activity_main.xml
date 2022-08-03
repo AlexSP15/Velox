@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/txtUser"
+            android:id="@+id/txtUserLogin"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="100dp"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txtContraseña"
+            android:id="@+id/txtContraseñaLogin"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -60,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+            app:layout_constraintTop_toBottomOf="@+id/txtUserLogin" />
 
         <Button
             android:id="@+id/btnLogin"
@@ -96,10 +96,10 @@
             android:textColor="#000000"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
+            app:layout_constraintTop_toBottomOf="@+id/txtContraseñaLogin" />
 
         <TextView
-            android:id="@+id/enlaceClient"
+            android:id="@+id/enlaceCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-42dp"
@@ -115,7 +115,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
+            app:layout_constraintTop_toBottomOf="@+id/txtContraseñaLogin" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
