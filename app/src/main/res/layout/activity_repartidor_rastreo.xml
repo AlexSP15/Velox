@@ -9,78 +9,83 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
-        android:layout_width="372dp"
-        android:layout_height="445dp"
+        android:layout_width="371dp"
+        android:layout_height="407dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/card1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
         <EditText
             android:id="@+id/txtPerRecibe"
             android:layout_width="314dp"
             android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="47dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Persona que recibe"
-            app:layout_constraintBottom_toBottomOf="@+id/buttonGuardar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.172"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.067" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtNota"
             android:layout_width="314dp"
             android:layout_height="44dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="47dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Nota"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.366" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
 
         <CheckBox
             android:id="@+id/checkBoxEntregado"
             android:layout_width="119dp"
             android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="242dp"
             android:text="Entregado"
-            app:layout_constraintBottom_toBottomOf="@+id/buttonGuardar"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGuardar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.577" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNota" />
 
         <Button
             android:id="@+id/buttonGuardar"
             android:layout_width="254dp"
             android:layout_height="49dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="16dp"
             android:text="Guardar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.959" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxEntregado" />
 
         <EditText
             android:id="@+id/txtTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="151dp"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="@+id/buttonGuardar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.061"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.223"
+            app:layout_constraintTop_toBottomOf="@+id/txtPerRecibe"
             tools:text="Telefono" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:editable="false"
-            android:fontFamily="@font/montserrat_alternates"
+            android:fontFamily="sans-serif"
             android:text="Entrega"
             android:textColor="#000000"
             android:textSize="25sp"
@@ -117,11 +122,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:fontFamily="@font/montserrat_alternates_bold"
+        android:fontFamily="sans-serif"
         android:text="Repartidor"
         android:textColor="#FFFFFF"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,30 +137,42 @@
         android:id="@+id/constraintLayout4"
         android:layout_width="370dp"
         android:layout_height="81dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/card1"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <EditText
             android:id="@+id/txtNumGuia"
             android:layout_width="185dp"
             android:layout_height="39dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="29dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Nombre de  Guia"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="12dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_consultar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_consultar"
             android:layout_width="135dp"
             android:layout_height="44dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
             android:text="Consultar"
-            tools:layout_editor_absoluteX="215dp"
-            tools:layout_editor_absoluteY="7dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
