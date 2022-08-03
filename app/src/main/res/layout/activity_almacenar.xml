@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Almacenar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroundvelox"
+        tools:context=".InicioCliente">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Almacena Envio"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Almacen"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="384dp"
+            android:layout_height="509dp"
+            android:background="@drawable/card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="204dp" >
+
+            <Button
+                android:id="@+id/btnGuardarAlmacen"
+                android:layout_width="359dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="58dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Guardar"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="30dp"
+                android:editable="false"
+                android:fontFamily="sans-serif"
+                android:text="Numero de Guia"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="22dp"
+                android:editable="false"
+                android:text="ID Almacen"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNguia" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="22dp"
+                android:editable="false"
+                android:text="ID de Estante"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlmacen" />
+
+            <EditText
+                android:id="@+id/txtNguia"
+                android:layout_width="322dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/txtAlmacen"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/txtEstante"
+                android:layout_width="329dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

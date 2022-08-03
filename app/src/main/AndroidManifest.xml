@@ -23,6 +23,14 @@
                     android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+            android:name=".despachaEnvio"
+            android:exported="false" />
+        <activity
+            android:name=".Almacenar"
+            android:exported="false" />
+        <activity
+            android:name=".AlmacenistaHome"
+            android:exported="false" />
         <activity
             android:name=".InicioCliente"
             android:exported="false" />
