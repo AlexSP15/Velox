@@ -15,7 +15,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="3dp"
         android:background="@drawable/card1"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarNewRep"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
@@ -27,14 +27,15 @@
             android:layout_marginStart="136dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="143dp"
+            android:editable="false"
             android:text="Info. Destinatario"
-            app:layout_constraintBottom_toTopOf="@+id/txtNomDest"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomDesRep"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txtNomDest"
+            android:id="@+id/txtNomDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -43,12 +44,12 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Nombre del remitente"
-            app:layout_constraintBottom_toTopOf="@+id/txtCodPostDest"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPDesRep"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <EditText
-            android:id="@+id/txtCalleDest"
+            android:id="@+id/txtCalleDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="15dp"
@@ -57,12 +58,12 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Calle y numero"
-            app:layout_constraintBottom_toTopOf="@+id/txtCiudDest"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdDesRep"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <EditText
-            android:id="@+id/txtCodPostDest"
+            android:id="@+id/txtCodPDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -71,10 +72,10 @@
             android:inputType="number"
             android:text="Codigo postal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNomDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNomDesRep" />
 
         <EditText
-            android:id="@+id/txtCiudDest"
+            android:id="@+id/txtCdDesRep"
             android:layout_width="172dp"
             android:layout_height="32dp"
             android:layout_marginTop="5dp"
@@ -83,10 +84,10 @@
             android:inputType="textPersonName"
             android:text="Ciudad"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCalleDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleDesRep" />
 
         <EditText
-            android:id="@+id/txtMunicDest"
+            android:id="@+id/txtMunicDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -95,10 +96,10 @@
             android:inputType="textPersonName"
             android:text="Municipio"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCodPostDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPDesRep" />
 
         <EditText
-            android:id="@+id/txtEstadDest"
+            android:id="@+id/txtEstadDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
@@ -107,10 +108,10 @@
             android:inputType="textPersonName"
             android:text="Estado"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCiudDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCdDesRep" />
 
         <EditText
-            android:id="@+id/txtEmailDest"
+            android:id="@+id/txtEmailDesRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -119,10 +120,10 @@
             android:inputType="textEmailAddress"
             android:text="E-mail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMunicDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicDesRep" />
 
         <EditText
-            android:id="@+id/txtTelefDestn"
+            android:id="@+id/txtPhonDestRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
@@ -131,7 +132,7 @@
             android:inputType="phone"
             android:text="Telefono"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEstadDest" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadDesRep" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -146,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <EditText
-            android:id="@+id/txtNumeGuia"
+            android:id="@+id/txtNumGuiaReP"
             android:layout_width="350dp"
             android:layout_height="38dp"
             android:layout_marginStart="15dp"
@@ -162,17 +163,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spinner_TipoPaquete"
+            android:id="@+id/spinner_TipoPaqRep"
             android:layout_width="170dp"
             android:layout_height="23dp"
             android:layout_marginStart="15dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNumeGuia" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaReP" />
 
         <Spinner
-            android:id="@+id/spinner_TipoEnvio"
+            android:id="@+id/spinner_TipoEnvioRep"
             android:layout_width="170dp"
             android:layout_height="22dp"
             android:layout_marginTop="4dp"
@@ -180,7 +181,7 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNumeGuia" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaReP" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -247,15 +248,16 @@
             android:layout_marginStart="149dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="143dp"
+            android:editable="false"
             android:text="Info. Remitente"
-            app:layout_constraintBottom_toTopOf="@+id/txtNomRemitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomRemitRep"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txtNomRemitente"
+            android:id="@+id/txtNomRemitRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -265,12 +267,12 @@
             android:inputType="textPersonName"
             android:text="Nombre del remitente"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txtCodPostRemitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPRemRep"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
-            android:id="@+id/txtMunicRemitente"
+            android:id="@+id/txtMunicRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -279,10 +281,10 @@
             android:inputType="textPersonName"
             android:text="Municipio"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCodPostRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPRemRep" />
 
         <EditText
-            android:id="@+id/txtCalleRemitente"
+            android:id="@+id/txtCalleRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="15dp"
@@ -291,12 +293,12 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Calle y numero"
-            app:layout_constraintBottom_toTopOf="@+id/txtCiudadRemitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdRemRep"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
-            android:id="@+id/txtCiudadRemitente"
+            android:id="@+id/txtCdRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
@@ -305,10 +307,10 @@
             android:inputType="textPersonName"
             android:text="Ciudad"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCalleRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleRemRep" />
 
         <EditText
-            android:id="@+id/txtEstadRemitente"
+            android:id="@+id/txtEstadRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
@@ -317,10 +319,10 @@
             android:inputType="textPersonName"
             android:text="Estado"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCiudadRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCdRemRep" />
 
         <EditText
-            android:id="@+id/txtCodPostRemitente"
+            android:id="@+id/txtCodPRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -329,10 +331,10 @@
             android:inputType="number"
             android:text="Codigo postal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNomRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNomRemitRep" />
 
         <EditText
-            android:id="@+id/txtEmailRemitente"
+            android:id="@+id/txtEmailRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginStart="16dp"
@@ -341,10 +343,10 @@
             android:inputType="textEmailAddress"
             android:text="E-mail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMunicRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicRemRep" />
 
         <EditText
-            android:id="@+id/txtTelefRemitente"
+            android:id="@+id/txtPhonRemRep"
             android:layout_width="170dp"
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
@@ -353,11 +355,11 @@
             android:inputType="phone"
             android:text="Telefono"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEstadRemitente" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadRemRep" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnGuardarNewRep"
         android:layout_width="223dp"
         android:layout_height="38dp"
         android:layout_marginStart="94dp"

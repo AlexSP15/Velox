@@ -10,83 +10,85 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
         android:layout_width="371dp"
-        android:layout_height="407dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="61dp"
         android:background="@drawable/card1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <EditText
-            android:id="@+id/txtPerRecibe"
-            android:layout_width="300dp"
+            android:id="@+id/txtGuiaRepEntrega"
+            android:layout_width="330dp"
             android:layout_height="44dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="47dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Persona que recibe"
+            android:text="Numero de Guia"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txtNota"
-            android:layout_width="300dp"
+            android:id="@+id/txtNotaRepEnt"
+            android:layout_width="330dp"
             android:layout_height="44dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="47dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Nota"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
-
-        <CheckBox
-            android:id="@+id/checkBoxEntregado"
-            android:layout_width="119dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginEnd="230dp"
-            android:text="Entregado"
-            app:layout_constraintBottom_toTopOf="@+id/buttonGuardar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNota" />
-
-        <Button
-            android:id="@+id/buttonGuardar"
-            android:layout_width="254dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="59dp"
-            android:layout_marginBottom="16dp"
-            android:text="Guardar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxEntregado" />
+            app:layout_constraintTop_toBottomOf="@+id/txtTelefonoRepEnt" />
 
         <EditText
-            android:id="@+id/txtTelefono"
-            android:layout_width="300dp"
+            android:id="@+id/txtTelefonoRepEnt"
+            android:layout_width="330dp"
             android:layout_height="44dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="47dp"
             android:ems="10"
             android:inputType="number"
+            android:text="Teléfono"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPerRecibe"
-            tools:text="Telefono" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPersona" />
+
+        <CheckBox
+            android:id="@+id/ckBxCambioStatus"
+            android:layout_width="119dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:text="Entregado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNotaRepEnt" />
+
+        <Button
+            android:id="@+id/btnGuardarRepEnt"
+            android:layout_width="254dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="100dp"
+            android:text="Guardar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ckBxCambioStatus" />
+
+        <EditText
+            android:id="@+id/txtPersona"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGuiaRepEntrega"
+            tools:text="Persona que recibió" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -95,11 +97,9 @@
         android:layout_height="55dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/card"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.013">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <TextView
             android:id="@+id/textView2"
@@ -132,48 +132,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="370dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/card1"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-        <EditText
-            android:id="@+id/txtNumGuia"
-            android:layout_width="185dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="29dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Nombre de  Guia"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_consultar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button_consultar"
-            android:layout_width="135dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="30dp"
-            android:text="Consultar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
