@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/drawable/background.xml" value="0.1755" />
+ 	   <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/drawable/background.xml" value="0.1755" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/drawable/button.xml" value="0.1885" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/drawable/card.xml" value="0.1885" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/drawable/card1.xml" value="0.1885" />
@@ -12,10 +12,21 @@
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_inicio_cliente.xml" value="0.22" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/fragment_inicio.xml" value="0.17074275362318841" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1075" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_admin_configuracion.xml" value="0.22447916666666667" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_admin_entregas_pendientes.xml" value="0.33" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_admin_usuario.xml" value="0.33" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_entregas_finalizadas_admin.xml" value="0.25" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_inicio_admin.xml" value="0.22447916666666667" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_inicio_cliente.xml" value="0.22447916666666667" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/activity_usuarios_admin.xml" value="0.33" />
+        <entry key="..\:/Documentos/GitHub/Velox/app/src/main/res/layout/fragment_inicio.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+<component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
