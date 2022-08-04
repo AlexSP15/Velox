@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Velox"
         tools:targetApi="31">
         <activity
+            android:name=".Repartidor_NuevaEntrega"
+            android:exported="false" />
+        <activity
+            android:name=".Repartidor_Rastreo"
+            android:exported="false" />
+        <activity
+            android:name=".repartidor_home"
+            android:exported="false" />
+        <activity
             android:name=".admin_Usuario"
             android:exported="false" />
         <activity

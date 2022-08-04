@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundvelox"
+    tools:context=".Repartidor_NuevaEntrega">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="386dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarNewRep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="143dp"
+            android:editable="false"
+            android:text="Info. Destinatario"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomDesRep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNomDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombre del remitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPDesRep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/txtCalleDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Calle y numero"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdDesRep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/txtCodPDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="Codigo postal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomDesRep" />
+
+        <EditText
+            android:id="@+id/txtCdDesRep"
+            android:layout_width="172dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Ciudad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleDesRep" />
+
+        <EditText
+            android:id="@+id/txtMunicDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Municipio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPDesRep" />
+
+        <EditText
+            android:id="@+id/txtEstadDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Estado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCdDesRep" />
+
+        <EditText
+            android:id="@+id/txtEmailDesRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="E-mail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicDesRep" />
+
+        <EditText
+            android:id="@+id/txtPhonDestRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Telefono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadDesRep" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="385dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <EditText
+            android:id="@+id/txtNumGuiaReP"
+            android:layout_width="350dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Numero de Guia"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_TipoPaqRep"
+            android:layout_width="170dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaReP" />
+
+        <Spinner
+            android:id="@+id/spinner_TipoEnvioRep"
+            android:layout_width="170dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaReP" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="372dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/card"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:fontFamily="sans-serif"
+            android:text="Nueva Entrega"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Repartidor"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="388dp"
+        android:layout_height="221dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="143dp"
+            android:editable="false"
+            android:text="Info. Remitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomRemitRep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNomRemitRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombre del remitente"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPRemRep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/txtMunicRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Municipio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPRemRep" />
+
+        <EditText
+            android:id="@+id/txtCalleRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Calle y numero"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdRemRep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/txtCdRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Ciudad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleRemRep" />
+
+        <EditText
+            android:id="@+id/txtEstadRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Estado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCdRemRep" />
+
+        <EditText
+            android:id="@+id/txtCodPRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="Codigo postal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomRemitRep" />
+
+        <EditText
+            android:id="@+id/txtEmailRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="E-mail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicRemRep" />
+
+        <EditText
+            android:id="@+id/txtPhonRemRep"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Telefono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadRemRep" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnGuardarNewRep"
+        android:layout_width="223dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="19dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
