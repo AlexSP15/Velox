@@ -84,7 +84,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btnRastrearCli"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginEnd="30dp"
