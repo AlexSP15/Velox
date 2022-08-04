@@ -30,23 +30,30 @@
             android:exported="false" />
         <activity
             android:name=".inicioAdmin"
+            android:name=".splashActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+            android:name=".despachaEnvio"
+            android:exported="false" />
+        <activity
+            android:name=".Almacenar"
+            android:exported="false" />
+        <activity
+            android:name=".AlmacenistaHome"
             android:exported="false" />
         <activity
             android:name=".InicioCliente"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
