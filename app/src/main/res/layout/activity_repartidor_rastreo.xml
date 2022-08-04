@@ -72,7 +72,9 @@
             android:layout_width="254dp"
             android:layout_height="49dp"
             android:layout_marginTop="100dp"
+            android:layout_marginBottom="46dp"
             android:text="Guardar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ckBxCambioStatus" />
