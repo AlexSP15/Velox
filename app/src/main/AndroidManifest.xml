@@ -29,7 +29,6 @@
             android:name=".Entregas_finalizadas_admin"
             android:exported="false" />
         <activity
-            android:name=".inicioAdmin"
             android:name=".splashActivity"
             android:exported="true"
             android:theme="@style/SplashScreen">
