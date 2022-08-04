@@ -14,12 +14,12 @@
         tools:layout_editor_absoluteY="-3dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="367dp"
-            android:layout_height="83dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="378dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/card1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
@@ -46,20 +46,23 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/btnEntregasFin"
+                android:id="@+id/btnUsuaios"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="163dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hhh"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/next" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
-            android:layout_width="367dp"
-            android:layout_height="82dp"
+            android:layout_width="376dp"
+            android:layout_height="80dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/card1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,14 +94,17 @@
                 app:layout_constraintVertical_bias="0.509" />
 
             <ImageView
-                android:id="@+id/btnEntregasFin"
+                android:id="@+id/btnEntregasPendientes"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="17dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hhh"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/next" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -178,14 +184,17 @@
                 app:layout_constraintVertical_bias="0.528" />
 
             <ImageView
-                android:id="@+id/btnEntregasFin"
+                android:id="@+id/btnEntregasFinalizadas"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hhh"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/next" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
