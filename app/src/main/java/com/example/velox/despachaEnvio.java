@@ -109,20 +109,5 @@ public class despachaEnvio extends AppCompatActivity {
                 }
             }
         });
-        /*Call<String> call = almacen.STRING_CALL(nGuia, statusEnvio);*/
-        /*call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                if (response.isSuccessful() && response.body() != null){
-                    numGuia.getText().clear();
-                    status.setChecked(false);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-
-            }
-        });*/
     }
 }
