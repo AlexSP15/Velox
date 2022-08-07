@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.registerTypeAdapter(Login.class,new Deserializer());
 
                     Retrofit retrofit = new Retrofit.Builder()
-                            .baseUrl("http://192.168.0.117:4000/usuarios/email/")
+                            .baseUrl("http://192.168.32.50:4000/usuarios/email/")
                             .addConverterFactory(GsonConverterFactory.create(builder.create()))
                             .build();
 

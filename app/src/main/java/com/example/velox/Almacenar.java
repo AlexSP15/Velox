@@ -31,7 +31,7 @@ public class Almacenar extends AppCompatActivity {
     private Button btnAlmacenar;
 
     //URL DEL API
-    String sBaseUrl = "http://192.168.0.117:4000/";
+    String sBaseUrl = "http://192.168.32.50:4000/";
 
     //Variables donde se guardaran los datos ingresados por el usuario
     String nGuia, idAlm, idEst;
@@ -103,49 +103,5 @@ public class Almacenar extends AppCompatActivity {
             }
         });
     }
-
-    /*private interface getInter{
-        @GET("almacen")
-        Call<String> STRING_CALL(
-                @Query("page") String page,
-                @Query("size") String size
-        );
-    }*/
-
-    /*private void getAlmacen(){
-        ProgressDialog dialog = ProgressDialog.show(
-                this, "", "Por favor, espere...", true
-        );
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(sBaseUrl)
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-
-        getInter inter = retrofit.create(getInter.class);
-        Call<String> call = inter.STRING_CALL("7560", "25");
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                if (response.isSuccessful() && response.body() != null){
-                    dialog.dismiss();
-
-                    try {
-                        JSONObject object = new JSONObject(response.body());
-                        JSONArray jsonArray = object.getJSONArray("data");
-                        GridLayoutManager layoutManager = new GridLayoutManager(
-                                Almacenar.this, 2
-                        );
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-
-            }
-        });
-    }*/
 }
 

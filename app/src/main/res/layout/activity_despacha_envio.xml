@@ -55,14 +55,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/constraintLayout3"
             android:layout_width="384dp"
             android:layout_height="509dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/card"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="204dp">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
             <TextView
                 android:id="@+id/textView5"
@@ -77,30 +78,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:editable="false"
-                android:text="ID Almacen"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtNGuiaDes" />
-
             <CheckBox
                 android:id="@+id/checkBoxDespacha"
                 android:layout_width="156dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:editable="true"
                 android:text="En Transito"
                 android:textSize="20sp"
                 app:buttonTint="#0C1059"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAlmacenDes" />
+                app:layout_constraintTop_toBottomOf="@+id/txtNGuiaDes" />
 
             <EditText
                 android:id="@+id/txtNGuiaDes"
@@ -114,31 +103,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <EditText
-                android:id="@+id/txtAlmacenDes"
-                android:layout_width="330dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="6dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
             <Button
                 android:id="@+id/btnGuardarDes"
                 android:layout_width="353dp"
                 android:layout_height="51dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="220dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="58dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Guardar"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxDespacha" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
