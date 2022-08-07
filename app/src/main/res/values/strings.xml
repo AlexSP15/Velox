@@ -2,4 +2,16 @@
     <string name="app_name">Velox</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="spn_title">Tipo de Envío</string>
+    <string-array name="tenvios">
+        <item>Estándar</item>
+        <item>Express</item>
+    </string-array>
+
+    <string name="spn_titlepack">Tipo de Paquete</string>
+    <string-array name="tpack">
+        <item>Sobre</item>
+        <item>Caja</item>
+    </string-array>
 </resources>
