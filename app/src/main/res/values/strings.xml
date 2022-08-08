@@ -14,4 +14,12 @@
         <item>Sobre</item>
         <item>Caja</item>
     </string-array>
+
+    <string name="spn_tipouser">Tipo de Usuarios</string>
+    <string-array name="tuser">
+        <item>Repartidor</item>
+        <item>Recepcionista</item>
+        <item>Almacenista</item>
+        <item>Administrador</item>
+    </string-array>
 </resources>
