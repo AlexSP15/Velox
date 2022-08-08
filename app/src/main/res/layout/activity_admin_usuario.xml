@@ -16,14 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".InicioCliente">
 
-        <ListView
-            android:layout_width="127dp"
-            android:layout_height="368dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnAgregar"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="350dp"
@@ -103,30 +95,35 @@
             app:layout_constraintStart_toEndOf="@+id/textNGuia"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
-        <ListView
-            android:layout_width="116dp"
-            android:layout_height="368dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="1dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnAgregar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textNGuia" />
-
         <Button
             android:id="@+id/btnAgregar"
             android:layout_width="296dp"
             android:layout_height="44dp"
             android:layout_marginStart="152dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="165dp"
-            android:layout_marginBottom="57dp"
             android:fontFamily="sans-serif"
             android:text="Agregar Usuario"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+            app:layout_constraintTop_toBottomOf="@+id/RecyclerViwName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewName"
+            android:layout_width="130dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNGuia" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewTipo"
+            android:layout_width="130dp"
+            android:layout_height="350dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
