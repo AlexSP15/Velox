@@ -70,10 +70,6 @@ public class despachaEnvio extends AppCompatActivity {
         @Headers({"Content-Type: application/json"})
         @PUT("almacen/numeroguia/{numEnvio}")
         Call<String> getbyNumEnvio(@Path("numEnvio") String numEnvio, @Body RequestBody updateRequest);
-        /*Call<String> STRING_CALL(
-                @Field("numeroguia") String numeroguia,
-                @Field("estatusalmacen") String estatusalmacen
-        );*/
     }
 
     private void editAlmacen(){

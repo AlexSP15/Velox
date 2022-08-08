@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -19,17 +23,21 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
+import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public class usuarios_admin extends AppCompatActivity {
     private Button btnConsultarUser, btnGuardar, btnEditar, btnEliminar;
-    private EditText textNombreUser, textNombre, textId,textEmail, textPassword, textTelefono, textSeguro, textFecha;
+    private EditText textIdUser, textNombre, textId,textEmail, textPassword, textTelefono, textSeguro, textFecha;
     private Spinner textTipo;
 
-    String sBaseUrl = "http://192.168.32.50:4000";
+    String sBaseUrl = "http://192.168.0.117:4000";
 
-    String nombreEm, idEm, emailEm, passwordEm, tipousuarioEm, telefonoEm, seguroEm, fechaNacEm;
+    String idUserEm, nombreEm, idEm, emailEm, passwordEm, tipousuarioEm, telefonoEm, seguroEm, fechaNacEm;
 
     boolean metodoEditar = false;
 
@@ -42,7 +50,7 @@ public class usuarios_admin extends AppCompatActivity {
         btnGuardar = findViewById(R.id.btnGuardar);
         btnEliminar = findViewById(R.id.btnEliminar);
         btnConsultarUser = findViewById(R.id.btnConsultarUser);
-        textNombreUser = findViewById(R.id.textNombreUser);
+        textIdUser = findViewById(R.id.textIdUser);
         textNombre = findViewById(R.id.textNombre);
         textId = findViewById(R.id.textId);
         textTipo =(Spinner) findViewById(R.id.textTipo);
@@ -57,12 +65,23 @@ public class usuarios_admin extends AppCompatActivity {
             public void onClick(View v) {
                 btnConsultarUser.setEnabled(true);
                 btnConsultarUser.refreshDrawableState();
-                textNombreUser.setEnabled(true);
-                textNombreUser.refreshDrawableState();
+                textIdUser.setEnabled(true);
+                textIdUser.refreshDrawableState();
                 btnEditar.setEnabled(false);
                 btnEditar.refreshDrawableState();
 
                 metodoEditar = true;
+
+                idUserEm = textIdUser.getText().toString();
+            }
+        });
+
+        btnConsultarUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idUserEm = textIdUser.getText().toString();
+                mostrarUsuario();
+                btnEliminar.setEnabled(true);
             }
         });
 
@@ -70,10 +89,54 @@ public class usuarios_admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (metodoEditar == false){
-                    cargaData();
-                    addUsuario();
+                    if (passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()){
+                        Toast.makeText(usuarios_admin.this, "Ingresa los datos", Toast.LENGTH_LONG).show();
+                    } else {
+                        cargaData();
+                        addUsuario();
+                        textNombre.getText().clear();
+                        textId.getText().clear();
+                        textEmail.getText().clear();
+                        textPassword.getText().clear();
+                        textTelefono.getText().clear();
+                        textSeguro.getText().clear();
+                        textFecha.getText().clear();
+                    }
                 } else {
+                    if (passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()){
+                        Toast.makeText(usuarios_admin.this, "Ingresa los datos", Toast.LENGTH_LONG).show();
+                    } else {
+                        cargaData();
+                        editUsuario();
+                        textNombre.getText().clear();
+                        textId.getText().clear();
+                        textEmail.getText().clear();
+                        textPassword.getText().clear();
+                        textTelefono.getText().clear();
+                        textSeguro.getText().clear();
+                        textFecha.getText().clear();
+                        textIdUser.getText().clear();
+                    }
+                }
+            }
+        });
 
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idUserEm = textIdUser.getText().toString();
+                if (idUserEm.isEmpty() && passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()){
+                    Toast.makeText(usuarios_admin.this, "Por favor, consulte el usuario", Toast.LENGTH_LONG).show();
+                } else {
+                    eliminarrUsuario();
+                    textNombre.getText().clear();
+                    textId.getText().clear();
+                    textEmail.getText().clear();
+                    textPassword.getText().clear();
+                    textTelefono.getText().clear();
+                    textSeguro.getText().clear();
+                    textFecha.getText().clear();
+                    textIdUser.getText().clear();
                 }
             }
         });
@@ -211,14 +274,185 @@ public class usuarios_admin extends AppCompatActivity {
             public void onResponse(Call<String> call, Response<String> response) {
                 String body = (String) response.body();
 
-                Toast.makeText(usuarios_admin.this, "Registro Exitoso", Toast.LENGTH_LONG).show();
+                Toast.makeText(usuarios_admin.this, "Usuario registrado", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-
+                Toast.makeText(usuarios_admin.this, "Error de conexion", Toast.LENGTH_LONG).show();
                 String message = t.getMessage();
             }
         });
+    }
+
+    private interface buscar{
+        @GET("usuarios/idusuario/{idusuario}")
+        Call<String> getbyIdUser(@Path("idusuario") String idusuario);
+    }
+
+    private void mostrarUsuario(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.0.117:4000")
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        usuarios_admin.buscar usuario = retrofit.create(usuarios_admin.buscar.class);
+
+
+        Call<String> call = usuario.getbyIdUser(idUserEm);
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String body = (String) response.body();
+
+                JSONObject jsonObject = null;
+                try {
+                    jsonObject = new JSONObject(body);
+
+                    usuarios_admin.Usuario envioResponse = new usuarios_admin.Usuario();
+                    JSONArray jUsuarios = jsonObject.getJSONArray("usuarios");
+                    JSONObject jUsuario = jUsuarios.getJSONObject(0);
+
+                    envioResponse.nombre = jUsuario.getString("nombre");
+                    envioResponse.email = jUsuario.getString("email");
+                    envioResponse.password = jUsuario.getString("password");
+                    envioResponse.tipousuario = jUsuario.getString("tipousuario");
+                    envioResponse.telefono = jUsuario.getString("telefono");
+                    envioResponse.idusuario = jUsuario.getString("idusuario");
+                    envioResponse.seguro = jUsuario.getString("seguro");
+                    envioResponse.fechaNac = jUsuario.getString("fechanac");
+
+                    textNombre.setText(envioResponse.nombre.toString());
+                    textNombre.refreshDrawableState();
+
+                    textId.setText(envioResponse.idusuario.toString());
+                    textId.refreshDrawableState();
+
+                    textEmail.setText(envioResponse.email.toString());
+                    textEmail.refreshDrawableState();
+
+                    textPassword.setText(envioResponse.password.toString());
+                    textPassword.refreshDrawableState();
+
+                    int positionTipoUser;
+                    if (envioResponse.tipousuario.equals("Repartidor")){
+                        positionTipoUser = 0;
+                    } else {
+                        if (envioResponse.tipousuario.equals("Recepcionista")){
+                            positionTipoUser = 1;
+                        } else {
+                            if (envioResponse.tipousuario.equals("Almacenista")){
+                                positionTipoUser = 2;
+                            } else {
+                                positionTipoUser = 3;
+                            }
+                        }
+                    }
+
+                    textTipo.setSelection(positionTipoUser);
+                    textTipo.refreshDrawableState();
+
+                    textTelefono.setText(envioResponse.telefono);
+                    textTelefono.refreshDrawableState();
+
+                    textSeguro.setText(envioResponse.seguro);
+                    textSeguro.refreshDrawableState();
+
+                    textFecha.setText(envioResponse.fechaNac);
+                    textFecha.refreshDrawableState();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(usuarios_admin.this, "Error de conexion", Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private interface putUsuario{
+        @Headers({"Content-Type: application/json"})
+        @PUT("usuarios/idusuario/{idusuario}")
+        Call<String> getbyIdUser(@Path("idusuario") String idusuario, @Body RequestBody updateRequest);
+    }
+
+    private void editUsuario(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.0.117:4000")
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        usuarios_admin.putUsuario usuarios = retrofit.create(usuarios_admin.putUsuario.class);
+
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("nombre", nombreEm);
+        jsonObject.addProperty("idusuario", idEm);
+        jsonObject.addProperty("email", emailEm);
+        jsonObject.addProperty("password", passwordEm);
+        jsonObject.addProperty("tipousuario", tipousuarioEm);
+        jsonObject.addProperty("telefono", telefonoEm);
+        jsonObject.addProperty("seguro", seguroEm);
+        jsonObject.addProperty("fechanac", fechaNacEm);
+
+        // Convert JSONObject to String
+        String jsonObjectString = jsonObject.toString();
+        MediaType JSON = MediaType.get("application/json; charset=utf-8");
+
+        RequestBody requestBody = RequestBody.create(JSON, jsonObjectString);
+        Call<String> userObject = usuarios.getbyIdUser(idUserEm, requestBody);
+
+        userObject.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String body = (String) response.body();
+                Toast.makeText(usuarios_admin.this, "Usuario actualizado", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(usuarios_admin.this, "Error de conexion", Toast.LENGTH_LONG).show();
+                try {
+                    throw new Exception("error");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private interface deleteUsuario{
+        @DELETE("usuarios/idusuario/{idusuario}")
+        Call<String> getbyIdUser(@Path("idusuario") String idusuario);
+    }
+
+    private void eliminarrUsuario(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.0.117:4000")
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        usuarios_admin.deleteUsuario usuario = retrofit.create(usuarios_admin.deleteUsuario.class);
+
+
+        Call<String> call = usuario.getbyIdUser(idUserEm);
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String body = (String) response.body();
+                Toast.makeText(usuarios_admin.this, "Usuario eliminado", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(usuarios_admin.this, "Error de conexion", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 }
