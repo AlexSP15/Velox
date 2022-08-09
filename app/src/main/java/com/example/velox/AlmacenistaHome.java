@@ -38,13 +38,11 @@ public class AlmacenistaHome extends AppCompatActivity {
 
     private void gotoMain() {
         Intent intent = new Intent(AlmacenistaHome.this, Almacenar.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
     private void gotoDes() {
         Intent intent = new Intent(AlmacenistaHome.this, despachaEnvio.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }
