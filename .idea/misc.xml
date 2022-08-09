@@ -68,11 +68,16 @@
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_cliente_rastreo.xml" value="0.33" />
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_inicio_cliente.xml" value="0.22" />
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_recepcion_entrega.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_recepcion_h.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_recepcion_nueva_entrega.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_recepcion_rastreo.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_repartidor_nueva_entrega.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/fragment_inicio.xml" value="0.22" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
