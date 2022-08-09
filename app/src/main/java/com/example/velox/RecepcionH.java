@@ -46,17 +46,14 @@ public class RecepcionH extends AppCompatActivity {
     }
     private void gotoRNE() {
         Intent intent = new Intent(RecepcionH.this, RecepcionNuevaEntrega.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     private void gotoRAE() {
         Intent intent = new Intent(RecepcionH.this, RecepcionRastreo.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     private void gotoEE() {
         Intent intent = new Intent(RecepcionH.this, RecepcionEntrega.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }
