@@ -44,6 +44,8 @@
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_inicio_admin.xml" value="0.18125" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_inicio_cliente.xml" value="0.22" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_recepcion_entrega.xml" value="0.18125" />
+        <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_recepcion_h.xml" value="0.18125" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_repartidor_home.xml" value="0.18125" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_repartidor_nueva_entrega.xml" value="0.25" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/layout/activity_repartidor_rastreo.xml" value="0.18125" />
@@ -53,15 +55,11 @@
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/mipmap-anydpi-v26/icono.xml" value="0.1895" />
         <entry key="..\:/Users/aleja/Documents/GitHub/Velox/app/src/main/res/mipmap-anydpi-v26/icono_round.xml" value="0.1" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
-        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_almacenar.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_almacenar.xml" value="0.2" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_almacenista_home.xml" value="0.2" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_despacha_envio.xml" value="0.2" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_inicio_cliente.xml" value="0.2" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_recepcion_entrega.xml" value="0.16077898550724637" />
-        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_recepcion_h.xml" value="0.2" />
-        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_repartidor_nueva_entrega.xml" value="0.2" />
-        <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/activity_repartidor_rastreo.xml" value="0.2" />
         <entry key="..\:/Users/pavil/OneDrive/Documentos/GitHub/Velox/app/src/main/res/layout/fragment_inicio.xml" value="0.2" />
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/drawable/ic_launcher_background.xml" value="0.166" />
         <entry key="..\:/Users/samhd/OneDrive/Documentos/GitHub/proyectoProSalud/Velox/app/src/main/res/layout/activity_cliente_rastreo.xml" value="0.33" />
