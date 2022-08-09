@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundvelox"
+    tools:context=".RecepcionNuevaEntrega">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="386dp"
+        android:layout_height="255dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarNewRece"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="143dp"
+            android:editable="false"
+            android:text="Info. Destinatario"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomDesRece"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNomDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Nombre del destinatario"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPDesRece"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/txtCalleDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Calle y Número"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdDesRece"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/txtCodPDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Código Postal"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomDesRece" />
+
+        <EditText
+            android:id="@+id/txtCdDesRece"
+            android:layout_width="172dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Ciudad"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleDesRece" />
+
+        <EditText
+            android:id="@+id/txtMunicDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Municipio"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPDesRece" />
+
+        <EditText
+            android:id="@+id/txtEstadDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Estado"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCdDesRece" />
+
+        <EditText
+            android:id="@+id/txtEmailDesRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicDesRece" />
+
+        <EditText
+            android:id="@+id/txtPhonDestRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadDesRece" />
+
+        <EditText
+            android:id="@+id/txtReferenciaDesRece"
+            android:layout_width="350dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Referencia"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmailDesRece" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="385dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <EditText
+            android:id="@+id/txtNumGuiaRece"
+            android:layout_width="350dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:ems="10"
+            android:hint="Número de Guía"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_TipoPaqRece"
+            android:layout_width="170dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/tpack"
+            android:prompt="@string/spn_titlepack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaRece" />
+
+        <Spinner
+            android:id="@+id/spinner_TipoEnvioRece"
+            android:layout_width="170dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/tenvios"
+            android:prompt="@string/spn_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumGuiaRece" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="372dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/card"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:fontFamily="sans-serif"
+            android:text="Nueva Entrega"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Recepción"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="388dp"
+        android:layout_height="221dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card1"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="143dp"
+            android:editable="false"
+            android:text="Info. Remitente"
+            app:layout_constraintBottom_toTopOf="@+id/txtNomRemitRece"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNomRemitRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Nombre del remitente"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodPRemRece"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/txtMunicRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Municipio"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodPRemRece" />
+
+        <EditText
+            android:id="@+id/txtCalleRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Calle y Número"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCdRemRece"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/txtCdRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Ciudad"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalleRemRece" />
+
+        <EditText
+            android:id="@+id/txtEstadRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Estado"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCdRemRece" />
+
+        <EditText
+            android:id="@+id/txtCodPRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Código Postal"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomRemitRece" />
+
+        <EditText
+            android:id="@+id/txtEmailRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMunicRemRece" />
+
+        <EditText
+            android:id="@+id/txtPhonRemRece"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEstadRemRece" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnGuardarNewRece"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="94dp"
+        android:text="Guardar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
