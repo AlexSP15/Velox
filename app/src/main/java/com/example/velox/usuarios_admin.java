@@ -1,7 +1,9 @@
 package com.example.velox;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,6 +75,9 @@ public class usuarios_admin extends AppCompatActivity {
                 metodoEditar = true;
 
                 idUserEm = textIdUser.getText().toString();
+
+                btnGuardar.setEnabled(false);
+                btnGuardar.refreshDrawableState();
             }
         });
 
@@ -80,19 +85,27 @@ public class usuarios_admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 idUserEm = textIdUser.getText().toString();
-                mostrarUsuario();
-                btnEliminar.setEnabled(true);
+
+                if (idUserEm.isEmpty()){
+                    Toast.makeText(usuarios_admin.this, "Consulta un usuario",Toast.LENGTH_LONG).show();
+                }else {
+                    mostrarUsuario();
+                    btnGuardar.setEnabled(true);
+                    btnGuardar.refreshDrawableState();
+                    btnEliminar.setEnabled(true);
+                    btnEliminar.refreshDrawableState();
+                }
             }
         });
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cargaData();
                 if (metodoEditar == false){
                     if (passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()){
                         Toast.makeText(usuarios_admin.this, "Ingresa los datos", Toast.LENGTH_LONG).show();
                     } else {
-                        cargaData();
                         addUsuario();
                         textNombre.getText().clear();
                         textId.getText().clear();
@@ -118,6 +131,13 @@ public class usuarios_admin extends AppCompatActivity {
                         textIdUser.getText().clear();
                     }
                 }
+                btnConsultarUser.setEnabled(false);
+                btnConsultarUser.refreshDrawableState();
+                textIdUser.setEnabled(false);
+                textIdUser.refreshDrawableState();
+                metodoEditar = false;
+                btnEditar.setEnabled(true);
+                btnEditar.refreshDrawableState();
             }
         });
 
@@ -125,18 +145,32 @@ public class usuarios_admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 idUserEm = textIdUser.getText().toString();
-                if (idUserEm.isEmpty() && passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()){
+                passwordEm = textPassword.getText().toString();
+                nombreEm = textNombre.getText().toString();
+                seguroEm = textSeguro.getText().toString();
+                if (idUserEm.isEmpty()){
                     Toast.makeText(usuarios_admin.this, "Por favor, consulte el usuario", Toast.LENGTH_LONG).show();
                 } else {
-                    eliminarrUsuario();
-                    textNombre.getText().clear();
-                    textId.getText().clear();
-                    textEmail.getText().clear();
-                    textPassword.getText().clear();
-                    textTelefono.getText().clear();
-                    textSeguro.getText().clear();
-                    textFecha.getText().clear();
-                    textIdUser.getText().clear();
+                    if (passwordEm.isEmpty() && nombreEm.isEmpty() && seguroEm.isEmpty()) {
+                        Toast.makeText(usuarios_admin.this, "Por favor, consulte nuevamente", Toast.LENGTH_LONG).show();
+                    } else {
+                        eliminarrUsuario();
+                        textNombre.getText().clear();
+                        textId.getText().clear();
+                        textEmail.getText().clear();
+                        textPassword.getText().clear();
+                        textTelefono.getText().clear();
+                        textSeguro.getText().clear();
+                        textFecha.getText().clear();
+                        textIdUser.getText().clear();
+                        btnConsultarUser.setEnabled(false);
+                        btnConsultarUser.refreshDrawableState();
+                        textIdUser.setEnabled(false);
+                        textIdUser.refreshDrawableState();
+                        metodoEditar = false;
+                        btnEditar.setEnabled(true);
+                        btnEditar.refreshDrawableState();
+                    }
                 }
             }
         });
@@ -305,65 +339,79 @@ public class usuarios_admin extends AppCompatActivity {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 String body = (String) response.body();
+                if (body == null){
+                    AlertDialog.Builder dialogo = new AlertDialog.Builder(usuarios_admin.this);
+                    dialogo.setTitle("Aviso");
+                    dialogo.setMessage("Usuario erróneo o inexistente. Por favor, intenta con otro usuario");
+                    dialogo.setCancelable(false);
+                    dialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(usuarios_admin.this, "Intente de nuevo", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    dialogo.show();
 
-                JSONObject jsonObject = null;
-                try {
-                    jsonObject = new JSONObject(body);
+                } else {
+                    JSONObject jsonObject = null;
+                    try {
+                        jsonObject = new JSONObject(body);
 
-                    usuarios_admin.Usuario envioResponse = new usuarios_admin.Usuario();
-                    JSONArray jUsuarios = jsonObject.getJSONArray("usuarios");
-                    JSONObject jUsuario = jUsuarios.getJSONObject(0);
+                        usuarios_admin.Usuario envioResponse = new usuarios_admin.Usuario();
+                        JSONArray jUsuarios = jsonObject.getJSONArray("usuarios");
+                        JSONObject jUsuario = jUsuarios.getJSONObject(0);
 
-                    envioResponse.nombre = jUsuario.getString("nombre");
-                    envioResponse.email = jUsuario.getString("email");
-                    envioResponse.password = jUsuario.getString("password");
-                    envioResponse.tipousuario = jUsuario.getString("tipousuario");
-                    envioResponse.telefono = jUsuario.getString("telefono");
-                    envioResponse.idusuario = jUsuario.getString("idusuario");
-                    envioResponse.seguro = jUsuario.getString("seguro");
-                    envioResponse.fechaNac = jUsuario.getString("fechanac");
+                        envioResponse.nombre = jUsuario.getString("nombre");
+                        envioResponse.email = jUsuario.getString("email");
+                        envioResponse.password = jUsuario.getString("password");
+                        envioResponse.tipousuario = jUsuario.getString("tipousuario");
+                        envioResponse.telefono = jUsuario.getString("telefono");
+                        envioResponse.idusuario = jUsuario.getString("idusuario");
+                        envioResponse.seguro = jUsuario.getString("seguro");
+                        envioResponse.fechaNac = jUsuario.getString("fechanac");
 
-                    textNombre.setText(envioResponse.nombre.toString());
-                    textNombre.refreshDrawableState();
+                        textNombre.setText(envioResponse.nombre.toString());
+                        textNombre.refreshDrawableState();
 
-                    textId.setText(envioResponse.idusuario.toString());
-                    textId.refreshDrawableState();
+                        textId.setText(envioResponse.idusuario.toString());
+                        textId.refreshDrawableState();
 
-                    textEmail.setText(envioResponse.email.toString());
-                    textEmail.refreshDrawableState();
+                        textEmail.setText(envioResponse.email.toString());
+                        textEmail.refreshDrawableState();
 
-                    textPassword.setText(envioResponse.password.toString());
-                    textPassword.refreshDrawableState();
+                        textPassword.setText(envioResponse.password.toString());
+                        textPassword.refreshDrawableState();
 
-                    int positionTipoUser;
-                    if (envioResponse.tipousuario.equals("Repartidor")){
-                        positionTipoUser = 0;
-                    } else {
-                        if (envioResponse.tipousuario.equals("Recepcionista")){
-                            positionTipoUser = 1;
+                        int positionTipoUser;
+                        if (envioResponse.tipousuario.equals("Repartidor")){
+                            positionTipoUser = 0;
                         } else {
-                            if (envioResponse.tipousuario.equals("Almacenista")){
-                                positionTipoUser = 2;
+                            if (envioResponse.tipousuario.equals("Recepcionista")){
+                                positionTipoUser = 1;
                             } else {
-                                positionTipoUser = 3;
+                                if (envioResponse.tipousuario.equals("Almacenista")){
+                                    positionTipoUser = 2;
+                                } else {
+                                    positionTipoUser = 3;
+                                }
                             }
                         }
+
+                        textTipo.setSelection(positionTipoUser);
+                        textTipo.refreshDrawableState();
+
+                        textTelefono.setText(envioResponse.telefono);
+                        textTelefono.refreshDrawableState();
+
+                        textSeguro.setText(envioResponse.seguro);
+                        textSeguro.refreshDrawableState();
+
+                        textFecha.setText(envioResponse.fechaNac);
+                        textFecha.refreshDrawableState();
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-
-                    textTipo.setSelection(positionTipoUser);
-                    textTipo.refreshDrawableState();
-
-                    textTelefono.setText(envioResponse.telefono);
-                    textTelefono.refreshDrawableState();
-
-                    textSeguro.setText(envioResponse.seguro);
-                    textSeguro.refreshDrawableState();
-
-                    textFecha.setText(envioResponse.fechaNac);
-                    textFecha.refreshDrawableState();
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
             }
 
@@ -372,6 +420,7 @@ public class usuarios_admin extends AppCompatActivity {
                 Toast.makeText(usuarios_admin.this, "Error de conexion", Toast.LENGTH_LONG).show();
             }
         });
+
 
     }
 
