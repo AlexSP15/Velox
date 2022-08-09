@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class repartidor_home extends AppCompatActivity {
-    private ImageView btnRepEntrega;
+    private ImageView btnRepEntrega, btnNewEnvioRep;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,26 @@ public class repartidor_home extends AppCompatActivity {
             }
 
         });
+
+        btnNewEnvioRep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view ){
+                gotoEntrega();
+            }
+
+        });
     }
     private void bindUI(){
         btnRepEntrega = (ImageView) findViewById(R.id.btnRepEntrega);
+        btnNewEnvioRep = (ImageView) findViewById(R.id.btnNewEnvioRep);
     }
     private void gotoMain(){
         Intent intent = new Intent(repartidor_home.this,Repartidor_Rastreo.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    private void gotoEntrega(){
+        Intent intent = new Intent(repartidor_home.this,Repartidor_NuevaEntrega.class);
         startActivity(intent);
     }
 }
