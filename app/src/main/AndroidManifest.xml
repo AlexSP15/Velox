@@ -19,45 +19,58 @@
         tools:targetApi="31">
         <activity
             android:name=".RecepcionRastreo"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".RecepcionNuevaEntrega"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".RecepcionEntrega"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".RecepcionH"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ClienteRastreo"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Repartidor_NuevaEntrega"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Repartidor_Rastreo"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".repartidor_home"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".admin_Usuario"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".admin_EntregasPendientes"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".admin_Configuracion"
             android:exported="false" />
         <activity
             android:name=".usuarios_admin"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Entregas_finalizadas_admin"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".splashActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/SplashScreen">
             <intent-filter>
@@ -68,21 +81,27 @@
         </activity>
         <activity
             android:name=".Almacenar"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".AlmacenistaHome"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".InicioCliente"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".inicioAdmin"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".despachaEnvio"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
     </application>
 
