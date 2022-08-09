@@ -26,8 +26,8 @@
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="Numero de Guia"
             android:inputType="textPersonName"
-            android:text="Numero de Guia"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,8 +38,8 @@
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="Nota"
             android:inputType="textPersonName"
-            android:text="Nota"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,8 +51,8 @@
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="Teléfono"
             android:inputType="number"
-            android:text="Teléfono"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtPersona" />
@@ -83,18 +83,18 @@
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="Persona que recibió"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtGuiaRepEntrega"
-            tools:text="Persona que recibió" />
+            app:layout_constraintTop_toBottomOf="@+id/txtGuiaRepEntrega" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="373dp"
-        android:layout_height="55dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/card"
         app:layout_constraintEnd_toEndOf="parent"
