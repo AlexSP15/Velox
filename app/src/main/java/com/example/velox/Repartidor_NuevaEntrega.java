@@ -32,7 +32,7 @@ public class Repartidor_NuevaEntrega extends AppCompatActivity {
     private Spinner tipoEnvio, tipoPaquete;
     private Button btnGuardar;
 
-    String sBaseUrl = "http://192.168.32.50:4000";
+    String sBaseUrl = "http://10.20.55.52:4000";
     String numGuiav, nomRemv, calleRemv, cpRemv, ciudadRemv, muniRemv, estRemv, emailRemv, telRemv;
     String referenciav, nomDomv, calleDomv, cpDomv, ciudadDomv, muniDomv, estDomv, emailDomv, telDomv, itemEnvio, itemPaq;
 

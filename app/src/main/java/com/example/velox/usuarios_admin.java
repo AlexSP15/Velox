@@ -37,7 +37,7 @@ public class usuarios_admin extends AppCompatActivity {
     private EditText textIdUser, textNombre, textId,textEmail, textPassword, textTelefono, textSeguro, textFecha;
     private Spinner textTipo;
 
-    String sBaseUrl = "http://192.168.0.117:4000";
+    String sBaseUrl = "http://10.20.55.52:4000";
 
     String idUserEm, nombreEm, idEm, emailEm, passwordEm, tipousuarioEm, telefonoEm, seguroEm, fechaNacEm;
 
@@ -326,7 +326,7 @@ public class usuarios_admin extends AppCompatActivity {
 
     private void mostrarUsuario(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.117:4000")
+                .baseUrl("http://10.20.55.52:4000")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 
@@ -432,7 +432,7 @@ public class usuarios_admin extends AppCompatActivity {
 
     private void editUsuario(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.117:4000")
+                .baseUrl("http://10.20.55.52:4000")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 
@@ -481,7 +481,7 @@ public class usuarios_admin extends AppCompatActivity {
 
     private void eliminarrUsuario(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.117:4000")
+                .baseUrl("http://10.20.55.52:4000")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 

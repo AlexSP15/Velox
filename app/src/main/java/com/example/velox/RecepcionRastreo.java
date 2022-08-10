@@ -172,7 +172,7 @@ public class RecepcionRastreo extends AppCompatActivity {
 
     private void mostrarEnvio(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.32.50:4000")
+                .baseUrl("http://10.20.55.52:4000")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.registerTypeAdapter(Login.class,new Deserializer());
 
                     Retrofit retrofit = new Retrofit.Builder()
-                            .baseUrl("http://192.168.32.50:4000/usuarios/email/")
+                            .baseUrl("http://10.20.55.52:4000/usuarios/email/")
                             .addConverterFactory(GsonConverterFactory.create(builder.create()))
                             .build();
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                                 String TipoUser = login.getTipousuario();
 
                                 if (pruebCorreo.equals(email) && pruebPass.equals(password)){
-                                    if (TipoUser.equals("Admin")){
+                                    if (TipoUser.equals("Administrador")){
                                         enlaceAdmin();
                                     } else {
                                         if (TipoUser.equals("Repartidor")){

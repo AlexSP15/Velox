@@ -31,7 +31,7 @@ public class admin_Usuario extends AppCompatActivity {
     RecyclerView recyclerViewName, recyclerViewTipo;
 
 
-    String sBaseUrl = "http://192.168.0.117:4000";
+    String sBaseUrl = "http://10.20.55.52:4000";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class admin_Usuario extends AppCompatActivity {
 
     private void mostrarUsuario(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.117:4000")
+                .baseUrl("http://10.20.55.52:4000")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 

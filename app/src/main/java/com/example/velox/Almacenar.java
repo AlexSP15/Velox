@@ -31,7 +31,7 @@ public class Almacenar extends AppCompatActivity {
     private Button btnAlmacenar;
 
     //URL DEL API
-    String sBaseUrl = "http://192.168.32.50:4000/";
+    String sBaseUrl = "http://10.20.55.52:4000/";
 
     //Variables donde se guardaran los datos ingresados por el usuario
     String nGuia, idAlm, idEst;
