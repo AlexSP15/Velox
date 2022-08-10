@@ -95,6 +95,7 @@
             android:name=".inicioAdmin"
             android:screenOrientation="portrait"
             android:exported="false" />
+
         <activity
             android:name=".despachaEnvio"
             android:screenOrientation="portrait"
