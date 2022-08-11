@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
@@ -55,6 +56,8 @@ public class despachaEnvio extends AppCompatActivity {
                 //Comprueba que no esten vacios los TextView
                 if (!nGuia.isEmpty()){
                     editAlmacen();
+                    numGuia.getText().clear();
+                    Toast.makeText(despachaEnvio.this, "Envio actualizado", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,6 +55,7 @@ public class Almacenar extends AppCompatActivity {
                 //Comprueba que no esten vacios los TextView
                 if (!nGuia.isEmpty() && !idAlm.isEmpty() && !idEst.isEmpty()){
                     addAlmacen();
+                    Toast.makeText(Almacenar.this, "Envio registrado", Toast.LENGTH_LONG).show();
                 }
             }
         });

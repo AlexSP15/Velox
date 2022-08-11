@@ -48,7 +48,7 @@ public class Repartidor_NuevaEntrega extends AppCompatActivity {
                 cargaData();
                 Destinatario destinatarioIngresado;
                 destinatarioIngresado = new Destinatario(nomDomv);
-                if (numGuiav.isEmpty() && cpDomv.isEmpty() && emailDomv.isEmpty() && estRemv.isEmpty()){
+                if (numGuiav.isEmpty() && cpDomv.isEmpty() && emailDomv.isEmpty() && estRemv.isEmpty() && nomDomv.isEmpty() && nomRemv.isEmpty()){
                     Toast.makeText(Repartidor_NuevaEntrega.this, "Ingresa todos los datos", Toast.LENGTH_LONG).show();
                 } else {
                     addEnvio();
